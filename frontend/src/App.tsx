@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import LoginForm from './components/LoginForm';
+import Home from './pages/Home';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
         <div id='app'>
             {
                 loggedIn ? (
-                    <></>
+                    <Home />
                 ) : (
                     <LoginForm onSuccess={handleLogin} />
                 )
