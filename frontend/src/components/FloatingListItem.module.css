@@ -1,0 +1,9 @@
+.item {
+    padding: 10px;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.item:hover {
+    background-color: #eaecee;
+}
