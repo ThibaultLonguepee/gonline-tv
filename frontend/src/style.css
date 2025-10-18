@@ -1,0 +1,16 @@
+html, body, #root {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    body {
+        background-color: #eaecee;
+        margin: 0;
+    }
+}
+
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+}
