@@ -1,9 +1,14 @@
-.item {
+.inactive, .active {
     padding: 10px;
     user-select: none;
     border-radius: 5px;
 }
 
-.item:hover {
+.inactive:hover {
     background-color: #eaecee;
+}
+
+.active {
+    background-color: #677eff;
+    color: white;
 }
