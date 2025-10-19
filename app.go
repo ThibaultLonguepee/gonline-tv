@@ -74,3 +74,7 @@ func saveCredentials(url, username, password string) error {
 
 	return nil
 }
+
+func (a *App) ListLiveCategories() ([]*models.Category, error) { return a.source.GetLiveCategories() }
+func (a *App) ListVodCategories() ([]*models.Category, error)  { return a.source.GetVodCategories() }
+func (a *App) ListShowCategories() ([]*models.Category, error) { return a.source.GetShowCategories() }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import LoginForm from './pages/login/LoginForm';
+import Home from './pages/home/Home';
 import { IsAuthenticated } from '../wailsjs/go/main/App'
-import LoginForm from './components/LoginForm';
-import Home from './pages/Home';
 
 function App() {
 

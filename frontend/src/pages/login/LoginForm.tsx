@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react"
-import { Authenticate } from "../../wailsjs/go/main/App"
+import { Authenticate } from "../../../wailsjs/go/main/App"
 import styles from './LoginForm.module.css';
 
 export default function LoginForm({ onSuccess }: { onSuccess: () => void }) {
