@@ -75,14 +75,34 @@ func saveCredentials(url, username, password string) error {
 	return nil
 }
 
-func (a *App) ListLiveCategories() ([]*models.Category, error) { return a.source.GetLiveCategories() }
-func (a *App) ListVodCategories() ([]*models.Category, error)  { return a.source.GetVodCategories() }
-func (a *App) ListShowCategories() ([]*models.Category, error) { return a.source.GetShowCategories() }
+func (a *App) ListLiveCategories() ([]*models.Category, error) {
+	return a.source.GetLiveCategories()
+}
 
 func (a *App) ListLiveStreams(categoryId int) ([]*models.LiveStream, error) {
 	return a.source.GetCategoryLiveStreams(categoryId)
 }
 
-func (a *App) GetLiveStreamLink(liveStreamId int) string {
+func (a *App) GetLiveStreamUrl(liveStreamId int) string {
 	return a.source.GetLiveStreamUrls(liveStreamId)[0]
+}
+
+func (a *App) ListVodCategories() ([]*models.Category, error) {
+	return a.source.GetVodCategories()
+}
+
+func (a *App) ListVods(categoryId int) ([]*models.Vod, error) {
+	return a.source.GetCategoryVods(categoryId)
+}
+
+func (a *App) GetVodDetails(vodId int) (*models.VodDetails, error) {
+	return a.source.GetVodDetails(vodId)
+}
+
+func (a *App) GetVodUrl(vodId int) (string, error) {
+	return a.source.GetVodUrl(vodId)
+}
+
+func (a *App) ListShowCategories() ([]*models.Category, error) {
+	return a.source.GetShowCategories()
 }

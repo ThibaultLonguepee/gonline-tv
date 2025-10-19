@@ -4,7 +4,11 @@ import {models} from '../models';
 
 export function Authenticate(arg1:string,arg2:string,arg3:string,arg4:boolean):Promise<void>;
 
-export function GetLiveStreamLink(arg1:number):Promise<string>;
+export function GetLiveStreamUrl(arg1:number):Promise<string>;
+
+export function GetVodDetails(arg1:number):Promise<models.VodDetails>;
+
+export function GetVodUrl(arg1:number):Promise<string>;
 
 export function IsAuthenticated():Promise<boolean>;
 
@@ -15,3 +19,5 @@ export function ListLiveStreams(arg1:number):Promise<Array<models.LiveStream>>;
 export function ListShowCategories():Promise<Array<models.Category>>;
 
 export function ListVodCategories():Promise<Array<models.Category>>;
+
+export function ListVods(arg1:number):Promise<Array<models.Vod>>;
