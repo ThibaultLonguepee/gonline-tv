@@ -4,9 +4,13 @@ import {models} from '../models';
 
 export function Authenticate(arg1:string,arg2:string,arg3:string,arg4:boolean):Promise<void>;
 
+export function GetLiveStreamLink(arg1:number):Promise<string>;
+
 export function IsAuthenticated():Promise<boolean>;
 
 export function ListLiveCategories():Promise<Array<models.Category>>;
+
+export function ListLiveStreams(arg1:number):Promise<Array<models.LiveStream>>;
 
 export function ListShowCategories():Promise<Array<models.Category>>;
 
