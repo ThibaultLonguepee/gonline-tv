@@ -1,0 +1,11 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: white;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
