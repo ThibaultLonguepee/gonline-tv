@@ -3,10 +3,10 @@ import FloatingList from "../../components/FloatingList";
 import FloatingListItem from "../../components/FloatingListItem";
 import { useState } from 'react';
 import { ContentType } from './Types';
-import LiveStreamView from './LiveStreamView';
+import LiveStreamsView from './LiveStreamsView';
 
 const contentComponentMap = new Map<ContentType, { value: string, element: React.ReactElement }>([
-    ["LiveStreams", { value: "📺 Live Streams", element: <LiveStreamView/> }],
+    ["LiveStreams", { value: "📺 Live Streams", element: <LiveStreamsView/> }],
     ["Movies", { value: "🎬 Movies", element: <>Movies</> }],
     ["Series", { value: "▶️ Series", element: <>Series</> }]
 ])

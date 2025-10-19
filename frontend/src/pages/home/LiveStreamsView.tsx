@@ -4,7 +4,7 @@ import FloatingListItem from "../../components/FloatingListItem";
 import FloatingList from "../../components/FloatingList";
 import { models } from "../../../wailsjs/go/models";
 
-export default function LiveStreamView() {
+export default function LiveStreamsView() {
 
     const [categories, setCategories] = useState<models.Category[]>([])
     const [selectedCategory, setSelectedCategory] = useState<models.Category>()
