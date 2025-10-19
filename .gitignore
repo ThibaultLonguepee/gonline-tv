@@ -1,3 +1,9 @@
+# Wails Output
 build/bin
+
+# Frontend Outputs
 node_modules
 frontend/dist
+
+# Credentials
+.gtv_saved_creds

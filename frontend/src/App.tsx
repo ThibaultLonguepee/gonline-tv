@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { IsAuthenticated } from '../wailsjs/go/main/App'
 import LoginForm from './components/LoginForm';
 import Home from './pages/Home';
 
@@ -10,6 +11,12 @@ function App() {
     function handleLogin() {
         setLoggedIn(true)
     }
+
+    useEffect(() => {
+        IsAuthenticated()
+            .then(result => setLoggedIn(result))
+            .catch()
+    }, [])
 
     return (
         <div id='app'>

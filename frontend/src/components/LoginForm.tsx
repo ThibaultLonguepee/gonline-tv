@@ -8,7 +8,8 @@ export default function LoginForm({ onSuccess }: { onSuccess: () => void }) {
         status: "",
         url: "",
         username: "",
-        password: ""
+        password: "",
+        remember: false
     })
 
     function handleChange(event: ChangeEvent<HTMLInputElement>) {
@@ -19,8 +20,16 @@ export default function LoginForm({ onSuccess }: { onSuccess: () => void }) {
         }))
     }
 
+    function handleToggleRemember() {
+        setState(prevState => ({
+            ...prevState,
+            remember: !prevState.remember
+        }))
+    }
+
     function handleSubmit(event: FormEvent) {
-        Authenticate(state.url, state.username, state.password)
+        console.log(state)
+        Authenticate(state.url, state.username, state.password, state.remember)
             .then(onSuccess)
             .catch(() => {
                 setState(prevState => ({
@@ -47,6 +56,10 @@ export default function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                     <input type='text' name='url' value={state.url} onChange={handleChange} placeholder='Server URL' />
                     <input type='text' name='username' value={state.username} onChange={handleChange} placeholder='Username' />
                     <input type='password' name='password' value={state.password} onChange={handleChange} placeholder='Password' />
+                    <label>
+                        <input type='checkbox' name='remember' checked={state.remember} onChange={handleToggleRemember}/>
+                        Stay signed in
+                    </label>
                     <button type='submit'>Submit</button>
                 </form>
             </div>
