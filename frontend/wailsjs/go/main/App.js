@@ -6,12 +6,20 @@ export function Authenticate(arg1, arg2, arg3, arg4) {
   return window['go']['main']['App']['Authenticate'](arg1, arg2, arg3, arg4);
 }
 
+export function GetLiveStreamLink(arg1) {
+  return window['go']['main']['App']['GetLiveStreamLink'](arg1);
+}
+
 export function IsAuthenticated() {
   return window['go']['main']['App']['IsAuthenticated']();
 }
 
 export function ListLiveCategories() {
   return window['go']['main']['App']['ListLiveCategories']();
+}
+
+export function ListLiveStreams(arg1) {
+  return window['go']['main']['App']['ListLiveStreams'](arg1);
 }
 
 export function ListShowCategories() {

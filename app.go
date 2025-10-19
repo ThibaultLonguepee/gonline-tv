@@ -78,3 +78,11 @@ func saveCredentials(url, username, password string) error {
 func (a *App) ListLiveCategories() ([]*models.Category, error) { return a.source.GetLiveCategories() }
 func (a *App) ListVodCategories() ([]*models.Category, error)  { return a.source.GetVodCategories() }
 func (a *App) ListShowCategories() ([]*models.Category, error) { return a.source.GetShowCategories() }
+
+func (a *App) ListLiveStreams(categoryId int) ([]*models.LiveStream, error) {
+	return a.source.GetCategoryLiveStreams(categoryId)
+}
+
+func (a *App) GetLiveStreamLink(liveStreamId int) string {
+	return a.source.GetLiveStreamUrls(liveStreamId)[0]
+}
