@@ -31,3 +31,7 @@ func (a *App) Authenticate(url, username, password string) error {
 	a.account = account
 	return nil
 }
+
+func (a *App) ListLiveCategories() ([]*models.Category, error) { return a.source.GetLiveCategories() }
+func (a *App) ListVodCategories() ([]*models.Category, error)  { return a.source.GetVodCategories() }
+func (a *App) ListShowCategories() ([]*models.Category, error) { return a.source.GetShowCategories() }

@@ -5,3 +5,15 @@
 export function Authenticate(arg1, arg2, arg3) {
   return window['go']['main']['App']['Authenticate'](arg1, arg2, arg3);
 }
+
+export function ListLiveCategories() {
+  return window['go']['main']['App']['ListLiveCategories']();
+}
+
+export function ListShowCategories() {
+  return window['go']['main']['App']['ListShowCategories']();
+}
+
+export function ListVodCategories() {
+  return window['go']['main']['App']['ListVodCategories']();
+}
