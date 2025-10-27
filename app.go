@@ -8,6 +8,7 @@ import (
 
 	"github.com/thibaultlonguepee/goxtream"
 	"github.com/thibaultlonguepee/goxtream/models"
+	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
 type App struct {
@@ -24,6 +25,7 @@ func NewApp() *App {
 
 func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
+	runtime.WindowMaximise(ctx)
 	a.authenticateFromMemory()
 }
 
