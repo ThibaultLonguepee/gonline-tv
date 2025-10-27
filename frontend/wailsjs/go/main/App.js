@@ -6,8 +6,16 @@ export function Authenticate(arg1, arg2, arg3, arg4) {
   return window['go']['main']['App']['Authenticate'](arg1, arg2, arg3, arg4);
 }
 
-export function GetLiveStreamLink(arg1) {
-  return window['go']['main']['App']['GetLiveStreamLink'](arg1);
+export function GetLiveStreamUrl(arg1) {
+  return window['go']['main']['App']['GetLiveStreamUrl'](arg1);
+}
+
+export function GetVodDetails(arg1) {
+  return window['go']['main']['App']['GetVodDetails'](arg1);
+}
+
+export function GetVodUrl(arg1) {
+  return window['go']['main']['App']['GetVodUrl'](arg1);
 }
 
 export function IsAuthenticated() {
@@ -28,4 +36,8 @@ export function ListShowCategories() {
 
 export function ListVodCategories() {
   return window['go']['main']['App']['ListVodCategories']();
+}
+
+export function ListVods(arg1) {
+  return window['go']['main']['App']['ListVods'](arg1);
 }

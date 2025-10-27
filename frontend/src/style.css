@@ -7,6 +7,10 @@ html {
     body {
         background-color: #eaecee;
         margin: 0;
+
+        #root {
+            font-size: 14px;
+        }
     }
 }
 

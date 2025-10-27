@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GetLiveStreamLink, ListLiveCategories, ListLiveStreams } from '../../../wailsjs/go/main/App'
+import { GetLiveStreamUrl, ListLiveCategories, ListLiveStreams } from '../../../wailsjs/go/main/App'
 import FloatingListItem from "../../components/FloatingListItem";
 import FloatingList from "../../components/FloatingList";
 import { models } from "../../../wailsjs/go/models";
@@ -33,7 +33,7 @@ export default function LiveStreamsView() {
         setSelectedStream(stream)
         setShowUrl(false)
         setStatus("")
-        GetLiveStreamLink(stream.Id)
+        GetLiveStreamUrl(stream.Id)
             .then(result => setStreamUrl(result))
             .catch()
     }
@@ -69,9 +69,9 @@ export default function LiveStreamsView() {
                         <img src={selectedStream?.Icon}></img>
                         <span className={styles.title}>{selectedStream.Name}</span>
                     </div>
-                    <div className={styles.url}>
+                    <div className={styles.section}>
                         <span className={styles.label}>URL</span>
-                        <div className={styles.urlInput}>
+                        <div className={styles.url}>
                             <input type={showUrl ? 'text' : 'password'} value={streamUrl} size={30} readOnly={true} />
                             <button className={styles.show} onClick={() => toggleShowUrl()}>👀</button>
                             <button className={styles.copy} onClick={() => copyUrl()}>Copy</button>
